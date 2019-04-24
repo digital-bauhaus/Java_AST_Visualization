@@ -21,5 +21,5 @@ npm install
 ```
 - run the server:
 ```
-node server.js
+node server.js /path/to/folder/holding/java/files
 ```
