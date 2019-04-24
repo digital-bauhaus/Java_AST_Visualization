@@ -4,8 +4,8 @@ This tool is a quick helper to visualize different AST Node types of the Java pr
 
 ## Requirements
 - Node JS
+- NPM
 - Java 11 JDK
-- Gradle
 
 ## How to run
 - create and link the jar file:
