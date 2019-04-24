@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Code Visualization</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/functions.js"></script>
+    </head>
+    <body>
+        <div id="control_elements">
+            <span>Displaying files in folder: {{java_folder_path}}</span>
+            <select id="java_file_select">
+                {{#each option}}
+                <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </select>
+            <input type="button" id="load_button" value="load"><br>
+            <div id="selection_elements">
+                <span>
+                    <input class="colorSwitch" id="methodDeclSwitch" type="checkbox">
+                    Method Declaration <input class="colorInput" id="methodDeclColor" value="#00ff00">
+                </span>
+                <hr>
+                <div class="clear"></div>
+                <span>
+                    <input class="colorSwitch" id="variableDeclSwitch" type="checkbox">
+                    Variable Declaration <input class="colorInput" id="variableDeclColor" value="#ff0000">
+                </span>
+                <hr>
+                <div class="clear"></div>
+                <span>
+                    <input class="colorSwitch" id="methodCallSwitch" type="checkbox">
+                    Method Call <input class="colorInput" id="methodCallColor" value="#8888ff">
+                </span>
+                <hr>
+                <div class="clear"></div>
+                <span>
+                    <input class="colorSwitch" id="initializerSwitch" type="checkbox">
+                    Variable Initializer (no outer Method Call) <input class="colorInput" id="initializerDeclColor" value="#ffa500">
+                </span>
+            </div>
+        </div>
+        <div id="code_div">
+        </div>
+    </body>
+</html>

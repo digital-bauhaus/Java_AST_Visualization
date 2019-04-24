@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'de.uniweimar.medien.iss'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.github.javaparser:javaparser-symbol-solver-core:3.13.4'
+    compile group: 'com.github.javaparser', name: 'javaparser-core-serialization', version: '3.13.4'
+    compile group: 'javax.json', name: 'javax.json-api', version: '1.1.4'
+    compile group: 'org.json', name: 'json', version: '20180813'
+    compile group: 'org.glassfish', name: 'javax.json', version: '1.1.4'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jar {
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.MF'
+    manifest {
+        attributes('Main-Class': 'java_file_parser.JavaFileParser',
+                   'Class-Path': configurations.compile.collect { it.getName() }.join(' '))
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
