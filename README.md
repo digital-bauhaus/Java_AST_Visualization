@@ -8,7 +8,7 @@ This tool is a quick helper to visualize different AST Node types of the Java pr
 - Java 11 JDK
 
 ## clone and train the greedyMLpipeline
-´´´git clone https://github.com/digital-bauhaus/greedyMLpipeline.git```
+´´´git clone https://github.com/digital-bauhaus/greedyMLpipeline.git´´´
 
 ## How to run
 - create and link the jar file:
