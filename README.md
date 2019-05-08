@@ -7,6 +7,9 @@ This tool is a quick helper to visualize different AST Node types of the Java pr
 - NPM
 - Java 11 JDK
 
+## Set the Model path
+- you have to set the path
+
 ## How to run
 - create and link the jar file:
 ```
@@ -21,5 +24,5 @@ npm install
 ```
 - run the server:
 ```
-node server.js /path/to/folder/holding/java/files
+node server.js /path/to/folder/holding/java/files /path/to/trained/model
 ```

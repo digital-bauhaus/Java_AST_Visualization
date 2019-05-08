@@ -1,11 +1,5 @@
 #code_div {
     border: 1px solid;
-    white-space: pre;
-    position: relative;
-    top:180px;
-    background-color: #ffffff;
-    z-index: 1;
-    /*height: 5px;*/
 }
 #control_elements {
     top: 0px;
@@ -20,6 +14,16 @@
 #selection_elements {
     width: 600px;
 }
+#code_div {
+    white-space: pre;
+    position: relative;
+    top:180px;
+    background-color: #ffffff;
+    z-index: 1;
+}
+#line_div {
+    text-align: right;
+}
 
 .colorSwitch {
     float: left;
@@ -29,4 +33,13 @@
 }
 .clear {
     clear: both;
+}
+.code_line_number {
+    float: left;
+    width: 30px;
+    border-right: 1px solid black;
+    margin-right: 5px;
+}
+.code_line_chars {
+    float: left;
 }
